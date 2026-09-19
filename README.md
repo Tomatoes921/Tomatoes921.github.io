@@ -5,6 +5,7 @@
 ## Instructions
 
 ### 0. Set up your development environment
+
 - If you're using Windows, do everything from a Linux distro (e.g. Ubuntu) running on WSL. All the instructions below assume a Linux/UNIX based development environment.
 - If you're using macOS, you will need to install [Homebrew](https://brew.sh/).
     - Be sure to run the post-install commands displayed by the installation script displays after it completes.
@@ -18,18 +19,17 @@
     - Then install `fnm` by following the instructions [in the repo](https://github.com/schniz/fnm).
     - You will need to open a new terminal window again after you install `fnm` in order for terminal to update its `PATH` variable and properly load/configure `fnm`.
     - Once `fnm` is installed, install the latest stable versions of NodeJS using the following commands:
-
         ```bash
         fnm install --lts --use
         fnm default $(fnm current)
         ```
 
 ### 1. Fork, then clone, this repo
+
 - **For all instructions, replace `YOUR_GITHUB_USERNAME` with your actual GitHub username.**
 - Fork this repository into your own GitHub account. Name the forked repository `YOUR_GITHUB_USERNAME.github.io`.
     - The repository can be private if you have GitHub Pro, which you can get for free by signing up for the [GitHub Student Developer Pack](https://education.github.com/pack/join). You can always make the repository private at a later date as well.
 - Once you've forked the repository into your personal GitHub account, clone it with the following commands:
-
     ```bash
     cd ~
     git clone git@github.com:YOUR_GITHUB_USERNAME/YOUR_GITHUB_USERNAME.github.io
@@ -39,13 +39,11 @@
 
 - Open the folder of the repository you just cloned onto your computer (i.e. `YOUR_GITHUB_USERNAME.github.io`) in VSCode.
 - In the terminal, start the **live development server** so you can get a preview of what the changes you make look like on the website. Run the following commands:
-
     ```bash
     cd YOUR_GITHUB_USERNAME.github.io
     npm install
     npm run dev
     ```
-
     - Open the link that is output to the terminal in your browser. You should see the live development server rendering your website.
 - Edit `app/config.js` with your personal information.
 - You can also choose custom fonts to use on the website. [Google Fonts](https://fonts.google.com/) is a reliable source of free fonts to choose from.
@@ -55,18 +53,15 @@
 ### 3. Set up GitHub Actions
 
 - After creating or forking your project, run:
-
     ```bash
     bash setup-github.sh
     ```
-
 - This creates `.github/workflows/deploy.yml` from the template embedded in the script, so the workflow can be added in a new commit in your own repository.
 - The workflow builds the site with Node.js 24 and deploys `out/` to GitHub Pages.
 
 ### 4. Commit your changes and push to GitHub
 
 - Once you've made edits to your website, you can save (commit) those changes and then push them to GitHub. Make sure you're in the top-level folder of the repo, i.e. `YOUR_GITHUB_USERNAME.github.io`, and run the following commands:
-
     ```bash
     git add .
     git status
@@ -74,7 +69,6 @@
     git status
     git push
     ```
-
 - Assuming everything goes well, your website should now be uploaded to GitHub.
 
 ### 5. Enable GitHub Pages
