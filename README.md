@@ -73,8 +73,24 @@
 
 ### 5. Enable GitHub Pages
 
-- Finally, ensure [GitHub Actions is enabled](https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/enabling-features-for-your-repository/managing-github-actions-settings-for-a-repository) in the new repository. Under **Settings > Pages > Build and deployment**, select **GitHub Actions** as the [publishing source](https://docs.github.com/en/pages/getting-started-with-github-pages/configuring-a-publishing-source-for-your-github-pages-site).
+- Finally, ensure [GitHub Actions is enabled](https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/enabling-features-for-your-repository/managing-github-actions-settings-for-a-repository) in the new repository. On the GitHub site for your repository (`https://github.com/YOUR_GITHUB_USERNAME/YOUR_GITHUB_USERNAME.github.io`), go to **Settings > Pages > Build and deployment**, select **GitHub Actions** as the [publishing source](https://docs.github.com/en/pages/getting-started-with-github-pages/configuring-a-publishing-source-for-your-github-pages-site).
 - Wait for the GitHub Action to run, and if successful, you should see your website active at https://YOUR_GITHUB_USERNAME.github.io/.
+
+### 6. Updating your website
+
+- Now, if you want to continue updating your website, you can do so by editing the files in the repository, i.e. the `YOUR_GITHUB_USERNAME.github.io` folder.
+- Then, once you are satisfied with the changes, run the following commands (`#` means comment, and so you don't need to copy/type those lines):
+    ```bash
+    # make sure you're in the top-most level of the repository folder
+    cd ~/YOUR_GITHUB_USERNAME.github.io
+    # tell git you want to save all the edits made ("staging")
+    git add .
+    # permanently record the changes ("commit the changes")
+    git commit -m "REPLACE THIS WITH A RELEVANT SUMMARY OF CHANGES MADE"
+    # upload the changes to GitHub, which will also rebuild and deploy your website
+    git push
+    ```
+- Once your [GitHub Student Developer Pack application](https://education.github.com/pack/join) is approved,
 
 ## Reference portfolios
 
